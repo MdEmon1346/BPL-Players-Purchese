@@ -1,0 +1,134 @@
+[
+  {
+    "id": 1,
+    "playerImg": "https://randomuser.me/api/portraits/men/10.jpg",
+    "playerName": "Rohit Sharma",
+    "playerCountry": "India",
+    "playingRole": "Batsman",
+    "rating": 9.3,
+    "battingStyle": "Right-hand Bat",
+    "bowlingStyle": "Right-arm Offbreak",
+    "price": 2000000
+  },
+  {
+    "id": 2,
+    "playerImg": "https://randomuser.me/api/portraits/men/11.jpg",
+    "playerName": "David Warner",
+    "playerCountry": "Australia",
+    "playingRole": "Batsman",
+    "rating": 9.0,
+    "battingStyle": "Left-hand Bat",
+    "bowlingStyle": "Right-arm Legbreak",
+    "price": 1750000
+  },
+  {
+    "id": 3,
+    "playerImg": "https://randomuser.me/api/portraits/men/12.jpg",
+    "playerName": "Jos Buttler",
+    "playerCountry": "England",
+    "playingRole": "Wicketkeeper-Batsman",
+    "rating": 9.2,
+    "battingStyle": "Right-hand Bat",
+    "bowlingStyle": "None",
+    "price": 1850000
+  },
+  {
+    "id": 4,
+    "playerImg": "https://randomuser.me/api/portraits/men/13.jpg",
+    "playerName": "Andre Russell",
+    "playerCountry": "West Indies",
+    "playingRole": "All-rounder",
+    "rating": 9.4,
+    "battingStyle": "Right-hand Bat",
+    "bowlingStyle": "Right-arm Fast",
+    "price": 2200000
+  },
+  {
+    "id": 5,
+    "playerImg": "https://randomuser.me/api/portraits/men/14.jpg",
+    "playerName": "Rashid Khan",
+    "playerCountry": "Afghanistan",
+    "playingRole": "Bowler",
+    "rating": 9.1,
+    "battingStyle": "Right-hand Bat",
+    "bowlingStyle": "Right-arm Legbreak",
+    "price": 2100000
+  },
+  {
+    "id": 6,
+    "playerImg": "https://randomuser.me/api/portraits/men/15.jpg",
+    "playerName": "Babar Azam",
+    "playerCountry": "Pakistan",
+    "playingRole": "Batsman",
+    "rating": 9.0,
+    "battingStyle": "Right-hand Bat",
+    "bowlingStyle": "Right-arm Offbreak",
+    "price": 1600000
+  },
+  {
+    "id": 7,
+    "playerImg": "https://randomuser.me/api/portraits/men/16.jpg",
+    "playerName": "Ben Stokes",
+    "playerCountry": "England",
+    "playingRole": "All-rounder",
+    "rating": 9.3,
+    "battingStyle": "Left-hand Bat",
+    "bowlingStyle": "Right-arm Fast Medium",
+    "price": 2000000
+  },
+  {
+    "id": 8,
+    "playerImg": "https://randomuser.me/api/portraits/men/17.jpg",
+    "playerName": "Kagiso Rabada",
+    "playerCountry": "South Africa",
+    "playingRole": "Bowler",
+    "rating": 8.8,
+    "battingStyle": "Left-hand Bat",
+    "bowlingStyle": "Right-arm Fast",
+    "price": 1500000
+  },
+  {
+    "id": 9,
+    "playerImg": "https://randomuser.me/api/portraits/men/18.jpg",
+    "playerName": "Shakib Al Hasan",
+    "playerCountry": "Bangladesh",
+    "playingRole": "All-rounder",
+    "rating": 9.1,
+    "battingStyle": "Left-hand Bat",
+    "bowlingStyle": "Left-arm Orthodox",
+    "price": 1400000
+  },
+  {
+    "id": 10,
+    "playerImg": "https://randomuser.me/api/portraits/men/19.jpg",
+    "playerName": "Glenn Maxwell",
+    "playerCountry": "Australia",
+    "playingRole": "All-rounder",
+    "rating": 8.9,
+    "battingStyle": "Right-hand Bat",
+    "bowlingStyle": "Right-arm Offbreak",
+    "price": 1700000
+  },
+  {
+    "id": 11,
+    "playerImg": "https://randomuser.me/api/portraits/men/20.jpg",
+    "playerName": "Jasprit Bumrah",
+    "playerCountry": "India",
+    "playingRole": "Bowler",
+    "rating": 9.5,
+    "battingStyle": "Right-hand Bat",
+    "bowlingStyle": "Right-arm Fast",
+    "price": 2300000
+  },
+  {
+    "id": 12,
+    "playerImg": "https://randomuser.me/api/portraits/men/21.jpg",
+    "playerName": "Faf du Plessis",
+    "playerCountry": "South Africa",
+    "playingRole": "Batsman",
+    "rating": 8.7,
+    "battingStyle": "Right-hand Bat",
+    "bowlingStyle": "Right-arm Medium",
+    "price": 1200000
+  }
+]
