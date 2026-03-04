@@ -1,6 +1,8 @@
 import nameImg from "../../assets/name.png";
 import flgImg from "../../assets/flag.png";
 import { useState } from "react";
+import { toast } from "react-toastify";
+
 
 const Player = ({ player, balance, setBalance,selectedMan, setSelectedMan }) => {
   // console.log(typeof(player.price));
@@ -58,11 +60,15 @@ const Player = ({ player, balance, setBalance,selectedMan, setSelectedMan }) => 
           <button
             onClick={() => {
               if (remainBalance < price) {
-                alert("Not Enough USD");
+                toast("Not Enough USD");
               } else {
                 setSelected((prev) => !prev);
                 setBalance(remainBalance);
               };
+              if(selectedMan.length===6){
+                toast("You can not selected More than 6 Players");
+                return
+              }
               setSelectedMan([...selectedMan, player]);
             }}
             className="bg-gray-200 border-none w-30 h-8 rounded-sm font-thin text-sm"

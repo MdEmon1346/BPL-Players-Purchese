@@ -1,10 +1,13 @@
 import deletes from "../../assets/delete.png";
 
-const SelectedCard = ({ InPlayer }) => {
-  console.log(InPlayer);
+const SelectedCard = ({ InPlayer,removePlayer  }) => {
+  // console.log(InPlayer);
+  const handleRemove =()=>{
+    removePlayer(InPlayer);
+  }
   return (
-    <div>
-      <div className="flex justify-between rounded-lg border-2 border-gray-300 items-center my-2 w-330 h-[128]">
+    <div className="max-w-7xl mx-auto">
+      <div className="flex justify-between rounded-lg border-2 border-gray-300 items-center my-2 ">
         <div className="flex items-center px-1 py-2  ">
           <img className="w-14 rounded-lg" src={InPlayer.playerImg} alt="" />
           <div className="mx-2">
@@ -12,7 +15,7 @@ const SelectedCard = ({ InPlayer }) => {
             <p className="font-light text-xs ">{InPlayer.battingStyle}</p>
           </div>
         </div>
-        <div className="px-1">
+        <div onClick={handleRemove} className="px-1">
           <img src={deletes} alt="" />
         </div>
       </div>

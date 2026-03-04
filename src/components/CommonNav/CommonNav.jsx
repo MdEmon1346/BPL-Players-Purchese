@@ -1,10 +1,14 @@
 import { use } from "react";
 
-const CommonNav = ({ playersPromise, toggle, setToggle }) => {
+const CommonNav = ({ playersPromise, toggle, setToggle, selectedMan }) => {
   const playersLength = use(playersPromise);
   return (
     <div className="flex font-semibold justify-between max-w-7xl mx-auto items-center">
-      <h2>Available Players: {playersLength.length}</h2>
+      <h2>
+        {toggle
+          ? `Available Players : ${playersLength.length}`
+          : `Selected Players : (${selectedMan.length}/6) `}
+      </h2>
       <div className="mr-4">
         <button
           onClick={() => setToggle(true)}
@@ -20,7 +24,7 @@ const CommonNav = ({ playersPromise, toggle, setToggle }) => {
             !toggle ? "bg-green-400" : ""
           }`}
         >
-          Selected <span>(0)</span>
+          Selected <span>({selectedMan.length})</span>
         </button>
       </div>
     </div>

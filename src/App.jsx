@@ -1,5 +1,6 @@
 import { Suspense, useState } from "react";
 import "./App.css";
+import { ToastContainer} from "react-toastify";
 
 import AvailablePlayers from "./components/AvailablePlayers/AvailablePlayers";
 import NavBar from "./components/NavBar/NavBar";
@@ -12,6 +13,11 @@ function App() {
   const [toggle, setToggle] = useState(true);
   const [balance, setBalance] = useState(60000000000);
   const [selectedMan, setSelectedMan] = useState([]);
+  const removePlayer = (p) => {
+    const filterData = selectedMan.filter((ply) => ply.id !== p.id);
+    setSelectedMan(filterData);
+    setBalance(balance + p.price);
+  };
   // console.log(selectedMan);
   return (
     <>
@@ -20,6 +26,7 @@ function App() {
         toggle={toggle}
         setToggle={setToggle}
         playersPromise={playersPromise}
+        selectedMan={selectedMan}
       ></CommonNav>
 
       {toggle === true ? (
@@ -34,10 +41,12 @@ function App() {
         </Suspense>
       ) : (
         <SelectedPlayers
+          removePlayer={removePlayer}
           selectedMan={selectedMan}
           setSelectedMan={setSelectedMan}
         ></SelectedPlayers>
       )}
+      <ToastContainer></ToastContainer>
     </>
   );
 }
