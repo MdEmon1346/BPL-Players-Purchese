@@ -1,8 +1,10 @@
 import nameImg from "../../assets/name.png";
 import flgImg from "../../assets/flag.png";
+import { useState } from "react";
 
 const Player = ({ player }) => {
-  console.log(player);
+  // console.log(player);
+  const [selected, setSelected] = useState(false);
   const {
     playerImg,
     playerName,
@@ -11,11 +13,12 @@ const Player = ({ player }) => {
     battingStyle,
     bowlingStyle,
     price,
+    playingRole,
   } = player;
   return (
     <div className="card w-96 shadow-sm  py-4 my-4 ">
       <figure>
-        <img src={playerImg} alt={playerName} />
+        <img className="object-cover w-full" src={playerImg} alt={playerName} />
       </figure>
       <div className="card-body">
         <div className="flex gap-2 items-center">
@@ -30,7 +33,7 @@ const Player = ({ player }) => {
           </div>
 
           <button className=" bg-gray-200 border-none w-25 h-6 rounded-sm font-thin text-base">
-            All Rounder
+            {playingRole}
           </button>
         </div>
 
@@ -50,8 +53,11 @@ const Player = ({ player }) => {
             <span className="pl-1 font-bold">USD</span>
           </div>
 
-          <button className=" bg-gray-200 border-none w-30 h-8 rounded-sm font-thin text-sm">
-            Choose Player
+          <button
+            onClick={() => setSelected((prev) => !prev)}
+            className="bg-gray-200 border-none w-30 h-8 rounded-sm font-thin text-sm"
+          >
+            {selected ? "Selected" : "Choose Player"}
           </button>
         </div>
       </div>
