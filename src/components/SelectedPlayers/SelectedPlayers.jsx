@@ -1,11 +1,14 @@
+import SelectedCard from "../SelectedCard/SelectedCard";
 
-
-const SelectedPlayers = () => {
-    return (
-        <div className="max-w-7xl mx-auto" >
-            <h2>Selected</h2>
-        </div>
-    );
+const SelectedPlayers = ({ selectedMan }) => {
+  // console.log(selectedMan);
+  return (
+    <div className="max-w-7xl mx-auto">
+      {
+        selectedMan.map(InPlayer=><SelectedCard InPlayer={InPlayer}></SelectedCard>)
+      }
+    </div>
+  );
 };
 
 export default SelectedPlayers;

@@ -2,8 +2,9 @@ import nameImg from "../../assets/name.png";
 import flgImg from "../../assets/flag.png";
 import { useState } from "react";
 
-const Player = ({ player }) => {
-  // console.log(player);
+const Player = ({ player, balance, setBalance,selectedMan, setSelectedMan }) => {
+  // console.log(typeof(player.price));
+
   const [selected, setSelected] = useState(false);
   const {
     playerImg,
@@ -15,6 +16,7 @@ const Player = ({ player }) => {
     price,
     playingRole,
   } = player;
+  const remainBalance = parseInt(balance - price);
   return (
     <div className="card w-96 shadow-sm  py-4 my-4 ">
       <figure>
@@ -54,7 +56,15 @@ const Player = ({ player }) => {
           </div>
 
           <button
-            onClick={() => setSelected((prev) => !prev)}
+            onClick={() => {
+              if (remainBalance < price) {
+                alert("Not Enough USD");
+              } else {
+                setSelected((prev) => !prev);
+                setBalance(remainBalance);
+              };
+              setSelectedMan([...selectedMan, player]);
+            }}
             className="bg-gray-200 border-none w-30 h-8 rounded-sm font-thin text-sm"
           >
             {selected ? "Selected" : "Choose Player"}

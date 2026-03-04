@@ -10,9 +10,12 @@ const playersPromise = fetch("/players.json").then((res) => res.json());
 
 function App() {
   const [toggle, setToggle] = useState(true);
+  const [balance, setBalance] = useState(60000000000);
+  const [selectedMan, setSelectedMan] = useState([]);
+  // console.log(selectedMan);
   return (
     <>
-      <NavBar></NavBar>
+      <NavBar balance={balance}></NavBar>
       <CommonNav
         toggle={toggle}
         setToggle={setToggle}
@@ -21,10 +24,19 @@ function App() {
 
       {toggle === true ? (
         <Suspense fallback={<h3>players are loading</h3>}>
-          <AvailablePlayers playersPromise={playersPromise}></AvailablePlayers>
+          <AvailablePlayers
+            balance={balance}
+            setBalance={setBalance}
+            playersPromise={playersPromise}
+            selectedMan={selectedMan}
+            setSelectedMan={setSelectedMan}
+          ></AvailablePlayers>
         </Suspense>
       ) : (
-        <SelectedPlayers></SelectedPlayers>
+        <SelectedPlayers
+          selectedMan={selectedMan}
+          setSelectedMan={setSelectedMan}
+        ></SelectedPlayers>
       )}
     </>
   );
